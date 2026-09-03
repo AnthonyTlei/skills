@@ -9,5 +9,6 @@ This repository is the source of truth for the maintained skills listed in `skil
 - Treat Linear Free as the compatibility target for every Linear-capable skill. Never require an upgrade, trial, paid add-on, AI credits, or a paid-only feature; use a local workflow when Free-plan availability is unclear or insufficient.
 - For a skill change, update its semantic version in `skills.toml` and add an entry to `CHANGELOG.md`.
 - Run `make validate` before declaring a change complete.
-- Do not add a repository license or publish the repository until upstream provenance and licensing have been verified.
+- Preserve `LICENSE`, `THIRD_PARTY_NOTICES.md`, package-level license files, and the source mapping in `docs/PROVENANCE.md`.
+- Before a public release, validate the catalog and scan the tracked tree and Git history for credentials or unwanted personal data.
 - Never overwrite unmanaged files or directories during installation.

@@ -1,6 +1,7 @@
 ---
 name: technical-writing
 description: "Write or revise developer documentation, RFCs, READMEs, PR descriptions, and commit messages for clarity, accuracy, and global readability. Uses Diátaxis for document purpose and plain technical English for sentences."
+license: MIT
 ---
 
 # Technical writing

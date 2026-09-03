@@ -1,6 +1,7 @@
 ---
 name: teach
 description: "Teach a codebase change, subsystem, or design in plain language by combining how it works with repository-backed reasons for its shape. Use when the user wants to understand, learn, or build a working mental model rather than change the code."
+license: MIT
 ---
 
 # Teach

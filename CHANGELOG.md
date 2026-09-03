@@ -4,6 +4,23 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-09-03
+
+### Added
+
+- Added a root MIT license, third-party notices, and package-level license files for every adapted skill.
+- Recorded the two upstream sources, authors, pinned revisions, file hashes, and adaptation boundaries.
+- Added a public-facing catalog, installation guide, credits, and license summary to the README.
+
+### Changed
+
+- Renamed the catalog from `anthony-skills` to `agent-skills`.
+- Added common secret-bearing local file patterns to `.gitignore`.
+
+### Security
+
+- Pinned both GitHub Actions dependencies to reviewed commit SHAs.
+
 ## [0.4.0] - 2026-09-03
 
 ### Changed

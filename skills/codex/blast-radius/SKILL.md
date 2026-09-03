@@ -1,6 +1,7 @@
 ---
 name: blast-radius
 description: "Assess what a code change could break beyond its diff, identify the safety invariants it depends on, and verify the highest-value claims with real code when safe. Use before shipping a risky change or when reviewing a diff whose indirect effects are unclear."
+license: MIT
 ---
 
 # Blast radius

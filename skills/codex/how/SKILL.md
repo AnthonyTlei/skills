@@ -1,6 +1,7 @@
 ---
 name: how
 description: "Explain how a codebase subsystem works, trace runtime flow, answer placement or ownership questions, and critique architecture when requested. Use for code walkthroughs and architectural mental models."
+license: MIT
 ---
 
 # How

@@ -1,6 +1,7 @@
 ---
 name: why
 description: "Investigate why code or architecture took its current shape using git history, hosted PR context when available, and rationale preserved in the repository. Use for design intent, regressions, tradeoffs, historical constraints, or unexplained thresholds. Use how for runtime behavior."
+license: MIT
 ---
 
 # Why

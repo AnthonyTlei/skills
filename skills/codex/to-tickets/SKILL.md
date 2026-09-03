@@ -1,6 +1,7 @@
 ---
 name: to-tickets
 description: Turn a plan, spec, issue, or conversation into dependency-aware tracer-bullet tickets. Use when the user wants work broken into actionable tickets, stored in the current repository by default or in its existing Linear project when one is connected.
+license: MIT
 ---
 
 # To Tickets
