@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "Project",
+    "summary": ""
+  },
+  "scope": {
+    "description": "",
+    "paths": [
+      "."
+    ],
+    "coverage": "unknown"
+  },
+  "domains": [],
+  "actors": [],
+  "surfaces": [],
+  "dependency_cycle_policy": "warning",
+  "retired_ids": []
+}

@@ -2,7 +2,7 @@
 
 A maintained collection of agent skills for software work. The repository currently ships Codex packages and keeps each harness separate so future Claude or Cursor ports can use their own metadata, tools, and invocation rules.
 
-These are opinionated adaptations for Codex and GPT models. They are not official releases from the upstream authors.
+The catalog combines original packages with opinionated adaptations for Codex and GPT models. The adaptations are not official releases from the upstream authors.
 
 ## Current skills
 
@@ -10,6 +10,7 @@ These are opinionated adaptations for Codex and GPT models. They are not officia
 | --- | --- |
 | `blast-radius` | Trace indirect change risks and verify the assumptions a change depends on. |
 | `bro` | Restate the previous answer in shorter, plainer language. |
+| `feature-map` | Maintain a project-owned map of durable capabilities, flows, dependencies, and verification evidence. |
 | `how` | Explain a codebase subsystem and critique its architecture when requested. |
 | `teach` | Build a guided technical explanation from current behavior and repository history. |
 | `technical-writing` | Write and revise developer documentation in clear technical English. |
@@ -76,7 +77,9 @@ Seven skills began as ports of [pstack](https://github.com/cursor/plugins/tree/m
 
 `to-spec` and `to-tickets` began as ports of [Matt Pocock's skills](https://github.com/mattpocock/skills).
 
-The packages have since been adapted for Codex, GPT-only delegation, the tools available in Codex, and this repository's publication and safety rules. [Provenance](docs/PROVENANCE.md) records the upstream revisions and file hashes. [Third-party notices](THIRD_PARTY_NOTICES.md) preserve both MIT notices.
+`feature-map` is original repository work based on a design brief supplied by the maintainer.
+
+The ported packages have since been adapted for Codex, GPT-only delegation, the tools available in Codex, and this repository's publication and safety rules. [Provenance](docs/PROVENANCE.md) records the upstream revisions and file hashes. [Third-party notices](THIRD_PARTY_NOTICES.md) preserve both MIT notices.
 
 ## License
 

@@ -4,6 +4,18 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-09-03
+
+### Added
+
+- Added the original `feature-map` Codex skill for project-owned capability, actor, flow, dependency, lifecycle, implementation, and verification maps.
+- Added a standard-library CLI for non-destructive initialization, structural validation, deterministic rendering, and generated-output freshness checks.
+- Added project templates, optional AGENTS guidance, reference documentation, realistic fixtures, and regression tests.
+
+### Changed
+
+- Documented the provenance and license boundary for original skill packages alongside upstream adaptations.
+
 ## [0.5.0] - 2026-09-03
 
 ### Added

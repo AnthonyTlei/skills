@@ -1,6 +1,6 @@
 # Provenance
 
-This catalog contains Codex adaptations from two MIT-licensed upstream sources. Anthony reports that the initial ports were made from Cursor-oriented versions on 2026-09-02. The files were compared with the pinned public revisions below on 2026-09-03.
+This catalog contains original work and Codex adaptations from two MIT-licensed upstream sources. Anthony reports that the initial ports were made from Cursor-oriented versions on 2026-09-02. The files were compared with the pinned public revisions below on 2026-09-03.
 
 The adaptations do not imply endorsement by either upstream author.
 
@@ -40,6 +40,10 @@ These ports replace Cursor-specific agents, model names, setup dependencies, and
 | `to-tickets` metadata | [`skills/engineering/to-tickets/agents/openai.yaml`](https://github.com/mattpocock/skills/blob/6654f6b60cd9d5be8b54c6fafe44346dabeb3b76/skills/engineering/to-tickets/agents/openai.yaml) | `21bc6215fffcd7614e9f772bb1760e87cc5fc7dcc707e7d282bc9414267a6090` |
 
 The Codex adaptations remove the upstream setup-skill dependency and make repository-local publication the default. Linear remains optional only for an existing matched project, with review, duplicate protection, read-back verification, and Linear Free compatibility.
+
+## Original packages
+
+`feature-map` was designed from a maintainer-supplied product brief and implemented in this repository. It is not derived from the pstack or Matt Pocock packages. Its instructions, project schema, templates, CLI, fixtures, and tests are original repository work covered by the root MIT license and the package-level `LICENSE.txt`.
 
 ## License boundary
 

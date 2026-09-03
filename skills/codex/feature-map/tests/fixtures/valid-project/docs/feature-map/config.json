@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "Example Checkout",
+    "summary": "A small checkout service used to exercise the feature-map contract."
+  },
+  "scope": {
+    "description": "Account access and payment submission",
+    "paths": [
+      "src",
+      "tests",
+      "docs"
+    ],
+    "coverage": "complete-for-declared-scope"
+  },
+  "domains": [
+    {
+      "id": "accounts",
+      "title": "Accounts",
+      "prefix": "ACC"
+    },
+    {
+      "id": "payments",
+      "title": "Payments",
+      "prefix": "PAY"
+    }
+  ],
+  "actors": [
+    {
+      "id": "customer",
+      "title": "Customer",
+      "type": "human"
+    },
+    {
+      "id": "payment-provider",
+      "title": "Payment provider",
+      "type": "external-system"
+    },
+    {
+      "id": "retry-worker",
+      "title": "Retry worker",
+      "type": "background"
+    }
+  ],
+  "surfaces": [
+    "web",
+    "api",
+    "worker",
+    "integration"
+  ],
+  "dependency_cycle_policy": "warning",
+  "retired_ids": []
+}
