@@ -35,6 +35,12 @@ version = "0.1.0"
 path = "skills/codex/technical-writing"
 
 [[skill]]
+name = "to-spec"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/to-spec"
+
+[[skill]]
 name = "to-tickets"
 harness = "codex"
 version = "0.2.0"

@@ -63,4 +63,4 @@ Repository tags version the catalog as a whole. Skill versions in `skills.toml` 
 
 ## Distribution boundary
 
-This repository currently has no license. Treat it as private and do not publish or redistribute its contents until the upstream influences and their licenses have been recorded. See [the provenance notes](docs/PROVENANCE.md).
+This repository currently has no top-level license because not every upstream influence has been traced. Individual skill packages may carry their own license. Treat the rest as private and do not publish or redistribute it until the remaining sources and licenses have been recorded. See [the provenance notes](docs/PROVENANCE.md).

@@ -4,6 +4,14 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-09-03
+
+### Added
+
+- Added an adapted `to-spec` skill from Matt Pocock's MIT-licensed skills repository.
+- Added local specification publishing under `docs/specs/` with a review gate, evidence boundaries, stable requirement identifiers, and a verification matrix.
+- Added conditional Linear project-document publishing with duplicate detection and read-back verification.
+
 ## [0.2.0] - 2026-09-03
 
 ### Changed
