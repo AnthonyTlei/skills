@@ -10,6 +10,7 @@ The catalog combines original packages with opinionated adaptations for Codex an
 | --- | --- |
 | `blast-radius` | Trace indirect change risks and verify the assumptions a change depends on. |
 | `bro` | Restate the previous answer in shorter, plainer language. |
+| `delegate-work` | Decide when to delegate, choose worker model and effort, and keep parallel work safe. |
 | `feature-map` | Maintain a project-owned map of durable capabilities, flows, dependencies, and verification evidence. |
 | `how` | Explain a codebase subsystem and critique its architecture when requested. |
 | `right-size-tests` | Choose the smallest durable test coverage that proves the actual change risk. |
@@ -78,7 +79,7 @@ Seven skills began as ports of [pstack](https://github.com/cursor/plugins/tree/m
 
 `to-spec` and `to-tickets` began as ports of [Matt Pocock's skills](https://github.com/mattpocock/skills).
 
-`feature-map` and `right-size-tests` are original repository work based on design briefs supplied by the maintainer.
+`delegate-work`, `feature-map`, and `right-size-tests` are original repository work based on design briefs supplied by the maintainer.
 
 The ported packages have since been adapted for Codex, GPT-only delegation, the tools available in Codex, and this repository's publication and safety rules. [Provenance](docs/PROVENANCE.md) records the upstream revisions and file hashes. [Third-party notices](THIRD_PARTY_NOTICES.md) preserve both MIT notices.
 

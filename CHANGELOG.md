@@ -4,6 +4,14 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-09-03
+
+### Added
+
+- Added the original `delegate-work` Codex skill for deciding when subagents provide real parallel value, assigning safe ownership, and integrating their evidence.
+- Added a current GPT-5.6 worker model and reasoning-effort ladder, with Luna for narrow repeatable work, Terra for ordinary exploration and synthesis, and Sol for implementation and difficult isolated problems.
+- Added shared-checkout, single-writer, worktree, worker-contract, escalation, and convergence rules to prevent parallel drift.
+
 ## [0.7.0] - 2026-09-03
 
 ### Added

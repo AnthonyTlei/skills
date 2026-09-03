@@ -17,6 +17,12 @@ version = "0.1.1"
 path = "skills/codex/bro"
 
 [[skill]]
+name = "delegate-work"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/delegate-work"
+
+[[skill]]
 name = "feature-map"
 harness = "codex"
 version = "0.1.0"

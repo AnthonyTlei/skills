@@ -1,0 +1,6 @@
+interface:
+  display_name: "Delegate Work"
+  short_description: "Use subagents without coordination drift"
+  default_prompt: "Use $delegate-work to decide what to delegate, select suitable worker models and effort, and keep integration safe."
+policy:
+  allow_implicit_invocation: true
