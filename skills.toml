@@ -29,6 +29,12 @@ version = "0.1.1"
 path = "skills/codex/how"
 
 [[skill]]
+name = "right-size-tests"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/right-size-tests"
+
+[[skill]]
 name = "teach"
 harness = "codex"
 version = "0.1.1"

@@ -1,0 +1,6 @@
+interface:
+  display_name: "Right-size Tests"
+  short_description: "Choose the smallest useful test coverage"
+  default_prompt: "Use $right-size-tests to choose proportionate tests and stop when the evidence is sufficient."
+policy:
+  allow_implicit_invocation: true

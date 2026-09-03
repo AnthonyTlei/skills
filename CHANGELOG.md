@@ -4,6 +4,14 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.7.0] - 2026-09-03
+
+### Added
+
+- Added the original `right-size-tests` Codex skill for choosing proportionate automated and manual verification.
+- Added explicit limits on duplicate coverage, full-suite reruns, timeout retries, assertion weakening, and premature automation of exploratory work.
+- Documented the testing guidance and Codex behavior reports used to shape the policy.
+
 ## [0.6.0] - 2026-09-03
 
 ### Added

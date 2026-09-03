@@ -45,6 +45,8 @@ The Codex adaptations remove the upstream setup-skill dependency and make reposi
 
 `feature-map` was designed from a maintainer-supplied product brief and implemented in this repository. It is not derived from the pstack or Matt Pocock packages. Its instructions, project schema, templates, CLI, fixtures, and tests are original repository work covered by the root MIT license and the package-level `LICENSE.txt`.
 
+`right-size-tests` was designed from a maintainer-supplied testing policy, then refined against primary testing guidance and direct public Codex issue reports. It is not a port or adaptation of another skill. Its instructions and research synthesis are original repository work covered by the root MIT license and the package-level `LICENSE.txt`.
+
 ## License boundary
 
 Both upstream sources use the MIT License. The root MIT license covers Anthony's original repository work and adaptations. Upstream-derived portions keep their original copyright and license notices in `THIRD_PARTY_NOTICES.md` and their package-level `LICENSE.txt` files.
