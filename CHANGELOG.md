@@ -4,6 +4,14 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-09-03
+
+### Changed
+
+- Made project-local Markdown tickets the default output for `to-tickets`.
+- Limited Linear publication to repositories with an unambiguous existing Linear project association.
+- Standardized local ticket sets under `docs/tickets/` with a batch index, stable ticket identifiers, explicit dependencies, acceptance criteria, and verification instructions.
+
 ## [0.1.0] - 2026-09-03
 
 ### Added
