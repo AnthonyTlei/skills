@@ -23,6 +23,16 @@ When connected Linear tools are available, make a bounded read-only check. Treat
 
 If no writable project repository is available, keep the draft in the conversation and explain the blocker.
 
+### Linear Free boundary
+
+The user uses Linear Free. Treat that as a hard compatibility constraint, not an invitation to suggest a trial or upgrade.
+
+- Before selecting Linear, check Linear's current official pricing and documentation because plan boundaries can change. Use only capabilities clearly available on Free.
+- Never change billing, start a trial, purchase or consume AI credits, or use a paid-only workflow on the user's behalf.
+- Keep this workflow to one ordinary document in an existing project. Do not use Linear Agent, Loops, document templates, attachments, private teams, guests, or another optional feature to create or manage the spec.
+- Treat the integration's document tool as capability, not proof of plan entitlement. If Free-plan document availability is unclear, choose Local.
+- If Linear rejects a write because of a plan, quota, or entitlement, stop immediately. Do not retry through a paid feature or substitute another Linear object. Offer Local publication, which requires approval if it changes the reviewed destination.
+
 ## Gather the source
 
 Use the current conversation as the primary source unless the user supplies another artifact. Read referenced plans, prototypes, issues, documents, and repository material deeply enough to preserve their requirements and decisions.
@@ -90,6 +100,8 @@ Do not commit the specification unless the user separately asks. Finish with the
 ## Publish to Linear
 
 Create a document inside the already matched Linear project. Do not use an issue, project description, initiative, attachment, or comment as a substitute.
+
+Reconfirm the Linear Free boundary above before any write. The document must not depend on templates, agent editing, attachments, or another optional capability.
 
 Before creation, search that project's resources and documents for the approved title and source. If a plausible existing spec is found, stop instead of overwriting or duplicating it. Updating an existing document requires a reviewed revision and explicit approval.
 

@@ -61,6 +61,8 @@ Use patch versions for compatible instruction fixes, minor versions for new beha
 
 Repository tags version the catalog as a whole. Skill versions in `skills.toml` record the version of each package.
 
+Linear-capable skills target the Free plan and must fall back to local artifacts rather than requiring a trial, upgrade, paid add-on, or AI credits. See [the Linear Free policy](docs/LINEAR_FREE.md).
+
 ## Distribution boundary
 
 This repository currently has no top-level license because not every upstream influence has been traced. Individual skill packages may carry their own license. Treat the rest as private and do not publish or redistribute it until the remaining sources and licenses have been recorded. See [the provenance notes](docs/PROVENANCE.md).

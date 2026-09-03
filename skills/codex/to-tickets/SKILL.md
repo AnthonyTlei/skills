@@ -25,6 +25,17 @@ Use Local when the Linear integration is unavailable, no matching Linear project
 - Select Linear only for an unambiguous existing match. Otherwise select Local and state that choice in the draft.
 - Do not require or mention Matt Pocock's setup skill.
 
+### Linear Free boundary
+
+The user uses Linear Free. Treat that as a hard compatibility constraint, not an invitation to suggest a trial or upgrade.
+
+- Before selecting Linear, check Linear's current official pricing and documentation because plan boundaries can change. Use only capabilities clearly available on Free.
+- Never change billing, start a trial, purchase or consume AI credits, or use a paid-only workflow on the user's behalf.
+- Keep this workflow to core issues, an existing project, existing team metadata, and native issue relations. Do not use Linear Agent, Loops, Triage Intelligence, Code Intelligence, Insights, Asks, SLAs, private teams, guests, or another optional feature merely because the integration exposes it.
+- Respect the Free workspace's current issue limit. Include the approved batch size in the publication review. If read-only tooling exposes remaining issue capacity, verify that the complete batch fits before writing.
+- If remaining capacity cannot be verified, state that uncertainty before approval. If Linear rejects a write because of a plan, quota, or entitlement, stop immediately, report any issues already created, and do not retry through a paid feature.
+- When Free-plan eligibility is unclear, select Local. Changing an already approved destination requires renewed approval.
+
 ## 2. Inspect the implementation context
 
 When a repository is in scope, inspect the smallest useful slice of it before drafting:
@@ -91,6 +102,8 @@ Use Codex's connected Linear integration. Before any write, use read-only calls 
 - target team;
 - the already matched project, plus a parent issue, cycle, or milestone when the source or user specifies one;
 - existing status and labels when relevant.
+
+Reconfirm the Linear Free boundary above. Do not publish unless the approved issue count and any capacity uncertainty were disclosed at review.
 
 Do not create labels, statuses, projects, teams, or other workspace configuration as part of this skill. Do not assume a `ready-for-agent` label exists. Reuse an established convention only when it is unambiguous from the source, nearby issues, or the user's instructions; otherwise leave optional metadata unset.
 

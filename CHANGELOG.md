@@ -4,6 +4,14 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-09-03
+
+### Changed
+
+- Made Linear Free the hard compatibility target for every Linear-capable skill.
+- Added fail-closed Free-plan, quota, billing, trial, and AI-credit guards to `to-tickets` and `to-spec`.
+- Required local fallback when a Linear capability is paid, unavailable, or unclear.
+
 ## [0.3.0] - 2026-09-03
 
 ### Added
