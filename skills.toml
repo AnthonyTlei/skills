@@ -1,0 +1,53 @@
+schema_version = 1
+
+[repository]
+name = "anthony-skills"
+default_harness = "codex"
+
+[[skill]]
+name = "blast-radius"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/blast-radius"
+
+[[skill]]
+name = "bro"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/bro"
+
+[[skill]]
+name = "how"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/how"
+
+[[skill]]
+name = "teach"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/teach"
+
+[[skill]]
+name = "technical-writing"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/technical-writing"
+
+[[skill]]
+name = "to-tickets"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/to-tickets"
+
+[[skill]]
+name = "unslop"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/unslop"
+
+[[skill]]
+name = "why"
+harness = "codex"
+version = "0.1.0"
+path = "skills/codex/why"
