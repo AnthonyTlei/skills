@@ -4,6 +4,19 @@ This file records user-visible changes to the maintained skill catalog. The form
 
 ## [Unreleased]
 
+### Removed
+
+- Retired `unslop` 0.1.1, `technical-writing` 0.1.1, and `delegate-work` 0.1.0 from the installable catalog. Original packages and licenses remain under `archive/codex/`.
+
+### Changed
+
+- Revised `how`, `why`, `teach`, and `blast-radius` to 0.2.0: concise evidence-led workflows, no fixed worker/model ladders or mandatory orchestration, and no automatic executable-proof requirement for static reviews.
+- Revised `right-size-tests` to 0.2.0: explicitly allow no new tests, require a distinct uncovered risk for additional coverage, and stop without automatic suite escalation after sufficient checks pass.
+- Revised `feature-map` to 0.2.0: whole-project scope when requested, outcome-based record boundaries, a discovery ledger, targeted record loading, and explicit coverage/evidence drift rules. Preserve the existing schema and CLI.
+- Revised `to-spec` to 0.3.0 and `to-tickets` to 0.4.0: honor existing authorization, write requested local drafts directly, retain external publication and retry safeguards, choose proportionate verification, and document current Linear save/read schemas and Free-plan limits.
+- Revised `bro` to 0.1.2 so a casual greeting does not trigger a rewrite.
+- Updated catalog, retirement instructions, provenance notes, and the read-only Linear compatibility record.
+
 ## [0.8.0] - 2026-09-03
 
 ### Added

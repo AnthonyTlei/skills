@@ -20,9 +20,9 @@ Use the bundled CLI for parsing, validation, and rendering. Use repository inspe
 - Keep lifecycle, implementation, and verification as separate claims.
 - Preserve stable IDs. Never renumber or recycle one. Retain removed features with `lifecycle: removed`.
 - Keep uncertainty visible. Use `unknown`, `partial`, warnings, and audit findings instead of inventing completeness.
-- Do not silently bootstrap an entire existing repository. Agree or state a narrow declared scope first.
+- Treat an explicit request to map the whole project as authorization for repository-wide discovery and map creation. State the scope and inspect it systematically; do not shrink that request to an arbitrary subsystem. For unspecified scope, start with the smallest coherent scope that answers the question.
 
-Read [architecture](references/architecture.md) before initializing a map. Read [the schema](references/schema.md) whenever creating or changing canonical records.
+Read [architecture](references/architecture.md) before initializing or changing the taxonomy of a map. Read [the schema](references/schema.md) whenever creating or changing canonical records.
 
 ## Choose the mode
 
@@ -59,8 +59,8 @@ If an existing repository has an equivalent documented convention, follow it onl
 Read [the bootstrap guide](references/bootstrap-guide.md), then:
 
 1. Establish the declared scope and honest coverage: `unknown`, `partial`, or `complete-for-declared-scope`.
-2. Inspect governing docs and the smallest systematic set of product surfaces needed for that scope: routes or screens, APIs, auth boundaries, data workflows, jobs, webhooks, integrations, flags, tests, operator paths, and relevant history.
-3. Define actors, domains with stable prefixes, capabilities, and major flows before enumerating features.
+2. Record discovery coverage in the map README using the bootstrap guide. Inspect governing docs and the smallest systematic set of product surfaces needed for that scope: routes or screens, APIs, auth boundaries, data workflows, jobs, webhooks, integrations, flags, tests, operator paths, and relevant history.
+3. Define actors, domains with stable prefixes, capabilities, and major flows before enumerating features. Split records by independently meaningful outcomes or lifecycle, not by screens, files, or test cases.
 4. Run `init` once. It refuses to overwrite an existing map.
 5. Create only durable feature and flow records supported by plans or repository evidence.
 6. Run `render`, then `check`.
@@ -104,10 +104,10 @@ Report findings before editing. Distinguish invalid structure from semantic drif
 
 ## CLI
 
-Use the script from this installed skill:
+Resolve the skill directory from the available-skills catalog or the path of this `SKILL.md`; do not assume a particular installation root. Use its bundled script:
 
 ```bash
-FEATURE_MAP_SKILL="${CODEX_HOME:-$HOME/.codex}/skills/feature-map"
+FEATURE_MAP_SKILL="/absolute/path/to/feature-map"
 python3 "$FEATURE_MAP_SKILL/scripts/feature_map.py" init --repo /absolute/project/path --project-name "Project" --scope "Declared product surface"
 python3 "$FEATURE_MAP_SKILL/scripts/feature_map.py" validate --repo /absolute/project/path
 python3 "$FEATURE_MAP_SKILL/scripts/feature_map.py" render --repo /absolute/project/path
@@ -144,4 +144,4 @@ State:
 - warnings, unverified claims, and coverage limits;
 - whether AGENTS guidance was changed.
 
-Never describe a partial map as a complete inventory.
+Never describe a partial map as a complete inventory. Validation checks structure and generated freshness; it does not establish semantic completeness, current runtime behavior, or successful product verification.

@@ -27,7 +27,7 @@ Use `README.md` as the entry point:
 ```markdown
 # <Initiative name>
 
-Status: Approved
+Status: <Draft or Approved>
 Created: <YYYY-MM-DD>
 Source: <paths, URLs, issue identifiers, or "Conversation">
 
@@ -48,7 +48,7 @@ Source: <paths, URLs, issue identifiers, or "Conversation">
 - None.
 ```
 
-List only genuine blockers. Use `Ready` when a ticket can start and `Blocked` when its declared dependencies remain incomplete. Record unresolved product decisions instead of burying them inside a ticket.
+List only genuine blockers. Use `Ready` when a ticket can start and `Blocked` when dependencies or a material product decision remain unresolved. Approval of publication does not settle an unresolved product decision. Record unresolved product decisions instead of burying them inside a ticket.
 
 ## Write each ticket
 

@@ -1,137 +1,47 @@
 ---
 name: right-size-tests
-description: Choose and maintain the smallest useful test coverage for a software change. Use when deciding test necessity, permanence, layer, scope, duplication, TDD suitability, or when to stop rerunning tests. Do not use for straightforward execution of an already-required check, to bypass repository policy, or to reduce coverage for high-risk behavior.
+description: "Decide whether a change needs new tests and choose the smallest sufficient verification. Use when planning test scope or stopping criteria, especially to avoid redundant tests and repeated suites."
 license: MIT
 ---
 
 # Right-size tests
 
-Protect behavior that matters without turning every edit into a test project. The goal is enough durable evidence for the actual risk, not the highest test count or coverage percentage.
+Choose evidence for the actual change risk. Adding no tests is a valid outcome. This skill is a decision aid, not an extra mandatory test phase for every edit.
 
-## Start with the project contract
+## Decide before adding
 
-Read applicable `AGENTS.md`, contributor guidance, test configuration, and CI checks. Follow explicit project requirements. Do not remove or skip required checks because this skill prefers a smaller test set.
+Follow applicable repository checks and explicit user requirements. Inspect nearby coverage. Before writing a test, identify the meaningful regression it would catch, whether existing evidence already catches it, and whether the behavior is stable enough to maintain as a contract.
 
-Inspect existing coverage before adding tests. Extend a nearby test when it can express the new contract clearly. Do not duplicate the same claim at several layers unless each layer proves a different failure boundary.
+Usually add no permanent test for prose, formatting, static content, trivial wiring enforced by types, temporary layouts, behavior-preserving refactors already covered, or assertions that merely repeat the implementation. Use inspection, a targeted build, or a manual check only when that adds useful evidence. Do not invent a check just to fill a report.
 
-## Decide whether a permanent test earns its cost
+Add or extend a test when it protects a meaningful uncovered risk: nontrivial logic, a reproduced bug, authorization, privacy, data integrity, persistence, compatibility, or a critical boundary. High-consequence stable behavior still matters in a prototype. Feature count and changed line count are not test quotas.
 
-Add or keep automated tests around:
+## Choose one sufficient seam
 
-- core domain invariants;
-- nontrivial calculations, parsing, and transformations;
-- persistence, migrations, transactions, and data integrity;
-- important API, serialization, filesystem, queue, or service boundaries;
-- authorization, validation, privacy, and security rules;
-- regression bugs with a reproducible failure;
-- critical workflows after their behavior has stabilized.
+Prefer an existing test that can express the contract. Choose the cheapest reliable boundary that would actually reveal the failure:
 
-Usually defer permanent automation for:
+- Types, schemas, lint, or compilation for constraints they enforce.
+- A focused unit test for logic or a state transition.
+- A narrow integration test when the failure lives between components.
+- A representative runtime or end-to-end check only when lower layers cannot prove the required claim.
+- Manual inspection for unsettled visual design or interaction feel.
 
-- temporary visual or layout behavior in a prototype;
-- scaffolding likely to be replaced soon;
-- trivial getters, framework wiring, and behavior already owned by a dependency;
-- implementation details with no independent behavioral contract;
-- broad snapshots that change with harmless layout or formatting edits;
-- a second test that proves no new risk beyond an existing test;
-- speculative cases with no plausible failure or meaningful consequence.
+Add a second seam only when it covers a distinct material failure. Do not mirror the same assertions across unit, integration, and browser suites. Mocks prove behavior against the mock, not the provider or deployed system.
 
-Before writing a test, answer:
+Use test-first work when a stable contract or reproducible regression makes it useful. Do not force TDD onto exploratory UI or scaffolding. Avoid new runners, elaborate fixtures, broad snapshots, combinatorial edge-case inventories, and test-only production abstractions for a bounded change.
 
-1. What specific regression could this catch?
-2. Is the behavior stable enough to become a maintained contract?
-3. What is the cheapest reliable seam that can observe the failure?
-4. Does an existing test already provide that evidence?
-5. Will the test survive a behavior-preserving refactor?
+## Run and stop
 
-If those answers do not justify permanent automation, use a bounded manual, build, lint, type, or runtime check and say why no test was added.
+Run the smallest affected check. Broaden only for a concrete cross-component risk, an established normal project check, or an explicit requirement. A passing targeted check does not automatically trigger package and full-suite runs.
 
-Prototype status never excuses stable high-consequence rules. Protect authorization, privacy, data integrity, accessibility semantics, or another durable contract even when the surrounding interface is temporary.
+Once sufficient targeted evidence and required checks pass, stop. Do not rerun unchanged passing checks for reassurance, after documentation-only follow-ups, or through multiple workers. Repeat only when relevant inputs changed or a bounded repeat is itself the experiment, such as investigating a race.
 
-## Choose the cheapest sufficient seam
+For a failure, inspect it before rerunning. Retry only after a relevant change or for a stated hypothesis about nondeterminism. Two identical failures without new evidence end blind retries; pursue a specific diagnostic or report the blocker. Do not increase timeouts by habit.
 
-Use the lowest-cost seam that can actually prove the behavior. "Lower" is not automatically better when the risk lives at a boundary.
+Never weaken assertions to get green results. Do not delete existing tests merely because this skill favors restraint; suite cleanup must be in scope and the lost protection understood.
 
-- Use compiler, type, schema, lint, or build checks for constraints those tools directly enforce.
-- Use unit tests for pure logic, state transitions, calculations, parsers, validation rules, and edge cases.
-- Use narrow integration or contract tests for persistence, serialization, framework wiring, and one external boundary at a time.
-- Use a small number of end-to-end tests for critical cross-boundary workflows that lower layers cannot prove.
-- Use exploratory or manual checks for changing visual design, interaction feel, animation, and early prototypes. Add durable automation after the contract settles.
+## Report only what matters
 
-Mocks prove behavior against the mock. They do not prove a provider, database, device, browser, or deployed system works. Keep that boundary explicit in the result.
+Briefly state checks performed, results, and material unverified boundaries. Mention why no test was added when that decision is useful to the user. Do not create a test plan artifact, coverage target, or lengthy matrix for routine work.
 
-## Use TDD when the contract is already clear
-
-Prefer test-first work when expected behavior can be stated precisely before implementation, including algorithms, domain rules, parsers, transformations, validation, and regression reproductions.
-
-For a bug fix, make the regression test fail for the expected reason before changing production code when that reproduction is safe and practical. Preserve the behavior contract while fixing it.
-
-Do not force TDD onto exploratory UI, uncertain product behavior, throwaway prototypes, or scaffolding. Build the smallest vertical slice, inspect the result, settle the behavior, then protect the stable boundary.
-
-## Keep the test change proportional
-
-State the intended test seam before substantial test work. A short note is enough for ordinary changes. Use a matrix only when several distinct risks or environments genuinely require one.
-
-- Cover meaningful outcomes and boundaries, not every branch combination.
-- Prefer one expressive test over many near-duplicates.
-- Reuse the repository's test framework and helpers.
-- Do not introduce a new runner, browser harness, fixture system, or service emulator for one low-risk change.
-- Keep snapshots short and reviewable. Prefer direct assertions when only a few values matter.
-- Do not rewrite unrelated tests or broaden the task into test-suite cleanup.
-- Never weaken, delete, or update an assertion merely to make a run green. First decide whether the product contract or the implementation is wrong.
-
-## Run tests without looping
-
-Use staged verification:
-
-1. Run the smallest relevant existing or new test after the behavior changes.
-2. If it passes, run the nearest affected package or subsystem suite when cross-file regression risk warrants it.
-3. Run the full suite once near completion only when repository policy requires it, the change crosses broad boundaries, or the full suite is cheap enough to be the normal project check.
-
-Record the command, scope, and result. A passing deterministic local check remains evidence until relevant code, fixtures, configuration, dependencies, or environment state changes.
-
-Do not rerun an unchanged passing command for reassurance. Bounded repetition is valid when repetition is the test, such as documented flake assessment, concurrency or race investigation, a drift-prone external system check, release certification, or explicit project policy. State the reason and limit before repeating it.
-
-Do not run the full suite after every small edit. Do not ask several agents to run the same suite.
-
-Rerun a failed test only after one of these occurs:
-
-- code or test data relevant to the failure changed;
-- a concrete environmental cause was corrected;
-- evidence indicates nondeterminism and one bounded rerun will distinguish it.
-
-If the same failure recurs twice without new evidence, stop blind retries. Continue only with bounded, hypothesis-driven diagnostics. Report the blocker when those diagnostics produce no new evidence. Do not keep increasing sleeps, retries, or timeouts without evidence that duration is the problem.
-
-## Stop when the evidence is sufficient
-
-Testing is complete when:
-
-- each material changed behavior has at least one sufficient verification seam, with another seam only when it proves a distinct boundary or risk;
-- the targeted checks pass;
-- any project-required broader checks pass, or their blocker is reported accurately;
-- no known failing test was weakened or hidden;
-- remaining unverified boundaries are named.
-
-Do not create more tests after these conditions are met unless they prove a distinct risk. A request for exhaustive testing, a regulated or safety-critical context, or direct project policy can justify more work. State that reason.
-
-## Handle existing failures honestly
-
-Distinguish failures caused by the current change from pre-existing failures. Confirm that distinction with the narrowest useful evidence. Do not repair unrelated failures unless the user asks.
-
-If a runner hangs or the environment cannot support a test, preserve the exact failure. Use bounded diagnostics tied to specific hypotheses, then report the blocker if no new evidence emerges. Do not claim the product works merely because a mock, build, or different test layer passed.
-
-## Review and report
-
-When reviewing a test plan or suite, identify:
-
-- important behavior with no reliable protection;
-- duplicated coverage that adds runtime without new confidence;
-- brittle assertions tied to implementation details;
-- high-level tests that can move to a narrower seam;
-- temporary tests that should not become permanent maintenance work.
-
-Recommend changes before deleting or restructuring tests unless the user asked for implementation.
-
-At completion, report tests added or deliberately omitted, commands run, results, and remaining boundaries. Keep the evidence proportional. Do not dump routine test narration into the final answer.
-
-For the rationale and source notes behind these rules, read [research notes](references/research.md).
+[Research notes](references/research.md) retain the background for this policy; read them only when the rationale is needed.

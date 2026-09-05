@@ -1,6 +1,6 @@
 ---
 name: bro
-description: "Restate the previous assistant response in shorter, plain human language. Use when the user asks for less jargon, a simpler explanation, or says bro."
+description: "Restate the previous assistant response in shorter, plain human language. Use when the user asks for less jargon, a simpler explanation, or explicitly invokes $bro. A casual greeting is not a rewrite request."
 license: MIT
 ---
 

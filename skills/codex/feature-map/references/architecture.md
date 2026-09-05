@@ -59,3 +59,17 @@ Project history may explain intent, but the map should link durable decisions or
 ## Determinism and portability
 
 The bundled CLI uses only Python's standard library, sorts every discovery and rendering operation, includes no timestamps, writes atomically, and never imports project code. Repeated rendering over unchanged canonical inputs must produce byte-identical output.
+
+## Record boundaries and context cost
+
+Use one record for a durable outcome with a coherent actor, contract, and lifecycle. Keep variations, UI states, and failure cases in that record unless they are independently meaningful capabilities. Several entry points may implement one feature. A shared infrastructure dependency is not itself a product feature unless an actor can rely on its outcome.
+
+Keep schema version 1 and the existing canonical files. A domain is a taxonomy entry, a capability is a grouping, and a feature owns the outcome and dependency edges. Do not introduce parallel registries, copied reverse edges, per-file feature annotations, or a service to query the map.
+
+The map README holds a compact discovery ledger: product surface or domain, inspected entry points, mapped IDs, known omissions, and the inspection revision or date. This records the basis for coverage without duplicating feature records. It is human-reviewed evidence, not a new validator-enforced schema.
+
+## Queries and freshness
+
+Start with the generated overview and relevant index, then read the canonical records needed for the question. Follow dependency edges only as far as the question requires. Expand discovery for uncovered surfaces instead of reading every record by default.
+
+Coverage is a claim about the inspected revision and declared scope, not a permanent property of the product. If changes introduce an uninspected surface, lower coverage to `partial` until reconciliation. Preserve historical verification dates; do not refresh them merely because a path exists or rendering succeeds. Record changed assumptions or environments in the affected record's prose and lower the verification claim when the old evidence no longer supports it.

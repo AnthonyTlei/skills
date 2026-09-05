@@ -41,3 +41,7 @@ If terminology changes but the durable capability remains the same, keep the ID 
 ## AGENTS guidance
 
 The asset `assets/AGENTS-feature-map-snippet.md` is optional. Add it only at the user's explicit request. Avoid duplicate `## Feature map` headings, preserve repository-specific instructions, and never overwrite an existing AGENTS file.
+
+## Coverage and evidence drift
+
+Update the README discovery ledger when scope, inspected surfaces, or known omissions change. Lower coverage to `partial` when newly added in-scope behavior has not been mapped. Keep old verification dates as historical evidence; if a changed contract invalidates that evidence, lower the claim and explain the gap in the record. Rendering and schema validation never refresh product verification.

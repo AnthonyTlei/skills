@@ -2,7 +2,7 @@
 
 ## Start with a boundary
 
-State the declared product scope before discovering records. Prefer one coherent product or subsystem over an unbounded repository sweep. Record the paths used for discovery, but do not confuse filesystem paths with product scope.
+State the declared product scope before discovering records. Use the whole product when the user asks for all project features; otherwise choose a coherent scope. Whole-product scope still needs explicit inclusions and exclusions. Record the paths used for discovery, but do not confuse filesystem paths with product scope.
 
 Use `unknown` coverage when discovery has barely begun. Use `partial` when the main shape is known but omissions remain. Use `complete-for-declared-scope` only after systematic inspection of every relevant surface inside the declared boundary.
 
@@ -51,3 +51,9 @@ It does not need a record for every implementation detail. A small repository ma
 ## Finish the bootstrap
 
 Run `render` and `check`. Review the generated domain, actor, flow, maturity, dependency, and verification views for taxonomy mistakes. Report what was inspected, what remains outside scope, and why the coverage value is honest.
+
+## Record the discovery basis
+
+Maintain a short table in `docs/feature-map/README.md` with columns for surface or domain, inspected entry points, mapped IDs, and omissions or uncertainty. Record the Git revision or inspection date above it. Include relevant background and operator behavior, not only visible screens. An explicitly excluded surface belongs in the scope notes; an in-scope surface not yet inspected is an omission.
+
+Before claiming `complete-for-declared-scope`, reconcile each relevant surface to mapped outcomes or an explained non-feature. Do not use passing validation or feature count as completeness evidence. This ledger is an inspection record, not an instruction to create a test for each row.

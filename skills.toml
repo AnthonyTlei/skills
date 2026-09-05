@@ -7,71 +7,53 @@ default_harness = "codex"
 [[skill]]
 name = "blast-radius"
 harness = "codex"
-version = "0.1.1"
+version = "0.2.0"
 path = "skills/codex/blast-radius"
 
 [[skill]]
 name = "bro"
 harness = "codex"
-version = "0.1.1"
+version = "0.1.2"
 path = "skills/codex/bro"
-
-[[skill]]
-name = "delegate-work"
-harness = "codex"
-version = "0.1.0"
-path = "skills/codex/delegate-work"
 
 [[skill]]
 name = "feature-map"
 harness = "codex"
-version = "0.1.0"
+version = "0.2.0"
 path = "skills/codex/feature-map"
 
 [[skill]]
 name = "how"
 harness = "codex"
-version = "0.1.1"
+version = "0.2.0"
 path = "skills/codex/how"
 
 [[skill]]
 name = "right-size-tests"
 harness = "codex"
-version = "0.1.0"
+version = "0.2.0"
 path = "skills/codex/right-size-tests"
 
 [[skill]]
 name = "teach"
 harness = "codex"
-version = "0.1.1"
+version = "0.2.0"
 path = "skills/codex/teach"
-
-[[skill]]
-name = "technical-writing"
-harness = "codex"
-version = "0.1.1"
-path = "skills/codex/technical-writing"
 
 [[skill]]
 name = "to-spec"
 harness = "codex"
-version = "0.2.0"
+version = "0.3.0"
 path = "skills/codex/to-spec"
 
 [[skill]]
 name = "to-tickets"
 harness = "codex"
-version = "0.3.1"
+version = "0.4.0"
 path = "skills/codex/to-tickets"
-
-[[skill]]
-name = "unslop"
-harness = "codex"
-version = "0.1.1"
-path = "skills/codex/unslop"
 
 [[skill]]
 name = "why"
 harness = "codex"
-version = "0.1.1"
+version = "0.2.0"
 path = "skills/codex/why"

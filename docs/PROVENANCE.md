@@ -54,3 +54,7 @@ The Codex adaptations remove the upstream setup-skill dependency and make reposi
 Both upstream sources use the MIT License. The root MIT license covers Anthony's original repository work and adaptations. Upstream-derived portions keep their original copyright and license notices in `THIRD_PARTY_NOTICES.md` and their package-level `LICENSE.txt` files.
 
 When adding another third-party skill, record its source, author, pinned revision, relevant file hashes, license, retained notices, and material adaptation before publishing the change.
+
+## Retired packages, 2026-09-05
+
+`unslop`, `technical-writing`, and `delegate-work` moved to `archive/codex/<name>/` and were removed from the install catalog. Their package files and license notices are preserved unchanged. Source mappings above remain historical provenance for both active and retired packages. The active explanation and review skills no longer contain fixed worker/model policies or redundant worker prompt templates.

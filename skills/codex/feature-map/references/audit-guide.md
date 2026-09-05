@@ -8,13 +8,13 @@ Run `check` to detect:
 
 - malformed JSON frontmatter;
 - schema or enum violations;
-- duplicate or recycled IDs;
+- duplicate IDs in current records; historical ID reuse requires Git inspection;
 - undeclared domains, prefixes, actors, or surfaces;
 - broken dependency and flow references;
 - self-dependencies and dependency cycles;
 - missing evidence files;
 - active flows that use removed features;
-- unsupported verification claims;
+- verification metadata inconsistencies; semantic support requires the pass below;
 - missing or stale generated files.
 
 ## Semantic pass
@@ -29,7 +29,7 @@ Within the declared scope, compare the canonical map with current product docs, 
 - tests that no longer exercise the claimed boundary;
 - specs or decisions that contradict current behavior;
 - flow ordering or outcomes that no longer match the product;
-- coverage claims unsupported by the inspected scope.
+- coverage claims unsupported by the discovery ledger, current revision, or inspected scope. Inspect newly added surfaces before retaining a complete-coverage claim.
 
 ## Findings
 

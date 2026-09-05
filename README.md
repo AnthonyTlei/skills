@@ -10,16 +10,15 @@ The catalog combines original packages with opinionated adaptations for Codex an
 | --- | --- |
 | `blast-radius` | Trace indirect change risks and verify the assumptions a change depends on. |
 | `bro` | Restate the previous answer in shorter, plainer language. |
-| `delegate-work` | Decide when to delegate, choose worker model and effort, and keep parallel work safe. |
 | `feature-map` | Maintain a project-owned map of durable capabilities, flows, dependencies, and verification evidence. |
 | `how` | Explain a codebase subsystem and critique its architecture when requested. |
 | `right-size-tests` | Choose the smallest durable test coverage that proves the actual change risk. |
 | `teach` | Build a guided technical explanation from current behavior and repository history. |
-| `technical-writing` | Write and revise developer documentation in clear technical English. |
 | `to-spec` | Turn discussion and repository evidence into a reviewed local or Linear specification. |
 | `to-tickets` | Split a plan into dependency-aware local or Linear implementation tickets. |
-| `unslop` | Remove common AI writing habits while preserving meaning and voice. |
 | `why` | Investigate design intent using Git history and repository evidence. |
+
+The active catalog has nine skills. `unslop`, `technical-writing`, and `delegate-work` are retired under `archive/codex/`, preserving their licenses and provenance without installing them. Explanation and review skills leave agent orchestration to the active runtime rather than prescribing worker batches or model ladders.
 
 Local Markdown is the default for `to-spec` and `to-tickets`. Their optional Linear path targets the Free plan and only uses an existing project that matches the current codebase. See [the Linear Free policy](docs/LINEAR_FREE.md).
 
@@ -57,7 +56,7 @@ Check the managed links at any time:
 make status
 ```
 
-Edits and Git pulls become visible through existing links without copying files. Run the installer again only after adding or renaming a skill. Restart Codex if it does not detect a change.
+Edits and Git pulls become visible through existing links without copying files. Run the installer again after adding or renaming a skill. Retiring a package also requires removing its old managed symlink; the installer does not prune links absent from the catalog. Remove only a link whose target is the retired repository package, never an unmanaged path. Restart Codex if it does not detect a change.
 
 The default target follows `CODEX_SKILLS_DIR`, then `$CODEX_HOME/skills`. Without either variable, the installer preserves an existing managed installation under `~/.codex/skills`; otherwise it uses `~/.agents/skills`.
 

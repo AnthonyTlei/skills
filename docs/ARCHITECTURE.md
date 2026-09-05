@@ -37,3 +37,11 @@ Before adding Claude, Cursor, or another harness:
 5. Test discovery and one realistic invocation in that harness.
 
 Keep ports separate until identical behavior has been observed. Share references or scripts only when the package remains self-contained after installation or distribution.
+
+## Retired packages
+
+`archive/codex/` preserves retired package sources and license notices outside the installable catalog. It is not a skill discovery directory. Removal from `skills.toml` does not prune an existing installation: inspect each retired link and unlink it only if it resolves to that repository package. Never remove a same-named unmanaged file, directory, or unrelated symlink.
+
+## Instruction scope
+
+Active skills describe task-specific outcomes, evidence boundaries, and stopping conditions. They do not duplicate runtime model catalogs, worker counts, or generic writing rules. Explanation and review skills preserve their existing explicit invocation settings; `feature-map` and `right-size-tests` remain available for automatic selection.
